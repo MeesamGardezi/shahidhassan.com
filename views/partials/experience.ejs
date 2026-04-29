@@ -1,0 +1,42 @@
+<section class="section-full alt-bg" id="experience">
+  <div class="section-inner section">
+    <div class="section-header reveal">
+      <div class="section-label">Professional experience</div>
+      <h2 class="section-title">18 years of <em>delivery</em></h2>
+    </div>
+
+    <div class="timeline">
+      <% experience.forEach(function(e, i) { %>
+      <div class="timeline-item reveal" data-delay="<%= i * 100 %>">
+        <div class="timeline-dot-wrap">
+          <div class="timeline-dot<%= i === 0 ? ' active' : '' %>"></div>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-meta">
+              <div class="timeline-period"><%= e.period %> <span class="timeline-dur">· <%= e.duration %></span></div>
+              <div class="timeline-company"><%= e.company %></div>
+              <div class="timeline-role"><%= e.role %></div>
+            </div>
+            <button class="timeline-toggle" aria-label="Expand">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-body-inner">
+              <p class="timeline-desc"><%= e.desc %></p>
+              <div class="tag-list">
+                <% e.tags.forEach(function(t) { %>
+                <span class="tag"><%= t %></span>
+                <% }) %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
