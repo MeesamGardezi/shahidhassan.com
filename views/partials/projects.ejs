@@ -1,13 +1,21 @@
+<!-- Skills strip -->
+<div class="skills-strip">
+  <% skills.forEach(function(s) { %>
+  <span class="skill-pill"><%= s %></span>
+  <% }) %>
+</div>
+
+<!-- Projects -->
 <section class="section" id="projects">
-  <div class="section-header reveal">
-    <div class="section-label">Featured projects</div>
-    <h2 class="section-title">Landmark <em>work</em></h2>
+  <div class="sec-hdr reveal">
+    <div class="sec-eyebrow">Featured projects</div>
+    <h2 class="sec-title">Landmark <em>work</em></h2>
   </div>
 
-  <div class="projects-bento">
+  <div class="projects-grid">
     <% projects.forEach(function(p, i) { %>
-    <div class="proj-card<%= p.featured ? ' featured' : '' %> reveal" data-delay="<%= i * 80 %>">
-      <div class="proj-num">0<%= i + 1 %></div>
+    <div class="proj<%= p.featured ? ' featured' : '' %> reveal" data-delay="<%= i * 90 %>">
+      <div class="proj-index">— <%= String(i + 1).padStart(2, '0') %></div>
       <div class="proj-location"><%= p.location %></div>
       <h3 class="proj-title"><%= p.title %></h3>
       <p class="proj-desc"><%= p.desc %></p>
