@@ -1,14 +1,14 @@
 <section class="section" id="expertise">
-  <div class="section-header reveal">
-    <div class="section-label">Competencies</div>
-    <h2 class="section-title">Areas of <em>expertise</em></h2>
+  <div class="sec-hdr reveal">
+    <div class="sec-eyebrow">Competencies</div>
+    <h2 class="sec-title">Areas of <em>expertise</em></h2>
   </div>
 
   <div class="expertise-grid">
     <% expertise.forEach(function(g, i) { %>
-    <div class="expertise-card reveal" data-delay="<%= i * 80 %>">
-      <div class="expertise-category"><%= g.title %></div>
-      <div class="tag-list">
+    <div class="exp-grp reveal" data-delay="<%= i * 80 %>">
+      <div class="exp-grp-title"><%= g.title %></div>
+      <div class="tags">
         <% g.skills.forEach(function(s) { %>
         <span class="tag"><%= s %></span>
         <% }) %>
